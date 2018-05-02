@@ -14,7 +14,7 @@ checknumber(){
 	if [[ $2 =~ ^-?[0-9]+$ ]] ; then
 		return
 	else
-		>&2 echo "fuckyounum"
+		>&2 echo "please put integer after $1"
 		exit 2
 	fi
 }
@@ -37,7 +37,7 @@ while [[ $# -gt 0 ]]; do
 			shift
 		;;
 		*)
-			>&2 echo "fuckyouaug"
+			>&2 echo "Usage: ./generate [-n num_of_pass] [-m min_pass_len] [-x max_pass_len]"
 			exit 2
 	esac
 	shift
